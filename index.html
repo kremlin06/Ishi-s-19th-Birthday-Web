@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 19th, Sheika Ishi Torres Ducut!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- section one, music -->
+  <section id="intro">
+    <div class="intro-bg"></div>
+    <div class="petal-layer" id="bgPetals"></div>
+    <div class="intro-content">
+      <p class="intro-for">a little something for</p>
+      <h1 class="intro-name">Sheika Ishi</h1>
+      <p class="intro-sub">April 7 · 2007 – 2026</p>
+      <button class="music-btn" id="musicBtn" aria-label="Tap to begin">
+        <span class="music-btn__ring"></span>
+        <span class="music-btn__ring ring2"></span>
+        <svg class="music-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polygon points="5,3 19,12 5,21" fill="currentColor" stroke="none"/>
+        </svg>
+        <span class="music-btn__label">tap to begin</span>
+      </button>
+    </div>
+    <!-- hidden audio -->
+    <audio id="bgMusic" loop>
+      <source src="/music/girl_jeif_annie.mp3" type="audio/mpeg" />
+    </audio>
+  </section>
+
+  <!-- (hidden until intro tapped) -->
+  <main id="mainSite" class="hidden">
+
+    <!-- (Floating 3D "19") -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-text">
+        <p class="hero-label">you are turning</p>
+        <div class="hero-19-wrap" id="hero19Wrap">
+          <span class="hero-19" id="hero19">19</span>
+          <div class="hero-19-shadow"></div>
+        </div>
+        <p class="hero-date">April 7, 2026</p>
+        <p class="hero-tilt-hint" id="tiltHint">tilt your phone to play</p>
+      </div>
+      <div class="hero-deco-petals" id="heroPetals"></div>
+    </section>
+
+    <!-- (Masonry Grid) -->
+    <section id="gallery">
+      <h2 class="section-title">moments with you</h2>
+      <p class="section-sub">long-press a photo to see it bigger</p>
+      <div class="masonry" id="masonryGrid">
+        <!-- Photos: replace src="photo1.jpg" etc. with your actual files -->
+        <div class="masonry__item" data-caption="Look how cute you are. ^^">
+          <img src="/photos/super_cute_baby_girl.jpg" alt="My beautiful baby girl." loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+        <div class="masonry__item tall" data-caption="You're so naturally beautiful, my baby Sheika.">
+          <img src="/photos/this.jpg" alt="Look how gorgeous you are, my love Sheika." loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+        <div class="masonry__item" data-caption="Naalala ko na manghang-mangha ako sa natural na kagandahan na mayroon ka, bab—birthday mo nga pala HAHAHAHA">
+          <img src="/photos/specially_this_one.jpg" alt="Photo 3" loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+        <div class="masonry__item wide" data-caption="Natural beauty? You are the definition of it.">
+          <img src="/photos/resto_girl.jpg" alt="One of the most stared photo of all time in my gallery." loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+        <div class="masonry__item" data-caption="Birthday mo ngayon ah? Huwag ka mag-sungit ah HAHAHAHA">
+          <img src="/photos/aba_nagma-maldita_HAHAHAHA.jpg" alt="Nagpapakita ng behavior ohh?" loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+        <div class="masonry__item" data-caption="One of my favourite photos of you!">
+          <img src="/photos/one_of_my_favorite.jpg" alt="I love you, Sheika." loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+        <div class="masonry__item tall" data-caption="Silly you, my love.">
+          <img src="/photos/silly_you_my_love.jpg" alt="Super cute!" loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+        <div class="masonry__item" data-caption="Ang ganda talaga, pwede na akong mag-end ng caption dito.">
+          <img src="/photos/my_baby_precious.jpg" alt="Ang ganda talaga." loading="lazy" />
+          <div class="masonry__overlay"></div>
+        </div>
+      </div>
+
+      <!-- 
+      Lightbox 
+      (hidden by default, shown when a photo is long-pressed; shows the full-size image and caption)
+      -->
+      <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lightboxClose">✕</button>
+        <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+        <p class="lightbox__caption" id="lightboxCaption"></p>
+      </div>
+    </section>
+
+    <!-- (Message Jar) -->
+    <section id="letters">
+      <h2 class="section-title">letters for you</h2>
+      <p class="section-sub">swipe to read the next one</p>
+
+      <div class="jar-wrap">
+        <div class="jar-svg-wrap">
+          <!-- simple decorative jar SVG -->
+          <svg class="jar-svg" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="45" y="8" width="70" height="18" rx="6" fill="#E8C4B8" fill-opacity="0.7"/>
+            <path d="M30 30 Q28 100 32 170 Q34 188 80 188 Q126 188 128 170 Q132 100 130 30 Z" fill="#FDE8E0" fill-opacity="0.55" stroke="#E8C4B8" stroke-width="1.5"/>
+            <path d="M34 55 Q36 50 80 50 Q124 50 126 55" stroke="#F4C5B5" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+            <!-- little folded notes inside -->
+            <rect x="55" y="90" width="28" height="20" rx="3" fill="#FFF0E8" stroke="#E8C4B8" stroke-width="1" transform="rotate(-8 55 90)"/>
+            <rect x="78" y="105" width="24" height="18" rx="3" fill="#F7E0D8" stroke="#E8C4B8" stroke-width="1" transform="rotate(5 78 105)"/>
+            <rect x="60" y="118" width="26" height="19" rx="3" fill="#FDE8E0" stroke="#E8C4B8" stroke-width="1" transform="rotate(-3 60 118)"/>
+          </svg>
+        </div>
+
+        <div class="letters-stack" id="lettersStack">
+          <div class="letter-card active" data-index="0">
+            <p class="letter-from">from: Jhon Kenth Delfin</p>
+            <br class="letter-body">
+              Dear My Sheika,<br/><br/>
+              I've been thinking about what to say, but the truth is, you're someone I don't want to describe with just simple words.
+              You're more than that to me.<br><br/>
+              You came into my life quietly, but you changed a lot in me. The way I think, the way I care, even the way I see love—
+              it all become more real because of you. And I don't take that lightly.<br><br/>
+              I know you're still learning, still growing, still figuring things out—and I see that. I respect that. You don't 
+              have to rush becoming "perfect", because the way you are right now already means something to me. <br><br/>
+              On your 19th birthday, I just want you to feel at peace. Hindi mo kailangan ikumpara sarili mo sa iba. Hindi mo
+              kailangan patunayan kung gaano ka ka-worthy. You already are.<br><br/>
+              I'm here, choosing you—not just on good days, but even when things get complicated. I'm learning too. and
+              I'm doing my best to love you in a way that you feel safe, respected, and understood.<br><br/>
+              Thank you for staying. Thank you for being you.<br><br/>
+              I love you, bebe. Happy birthday. 
+            </p>
+          </div>
+          <div class="letter-card" data-index="1">
+            <p class="letter-from">from: Kuya Cyril</p>
+            <p class="letter-body">
+              Happy bortdeyy Ishi, always take care of yourself and to your puppy Kenth, Stay strong always in any challenges 
+              you face alone or with Kenth, wishing you good health and more good years to come
+            </p>
+          </div>
+          <div class="letter-card" data-index="1">
+            <p class="letter-from">from: Kuya Mark</p>
+            <p class="letter-body">
+              Happy Birthday, Ishi!<br><br/>
+              Hope your day is packed with all the good stuff, great food, loud laughs, and zero stress. You deserve it. 
+              Can’t wait to see what this year brings for you and Kenth (and us tagging along, obviously). <br><br/>
+              Stay awesome, girl.
+            </p>
+          </div>
+          <div class="letter-card" data-index="1">
+            <p class="letter-from">from: Kuya Jose</p>
+            <p class="letter-body">
+              Happy birthday Ishi, stay strong sa relationship nyo ni Kenth. Sana magkita na kayo, sama kami jk
+            </p>
+          </div>
+          <div class="letter-card" data-index="2">
+            <p class="letter-from">from: The Creator</p>
+            <p class="letter-body">
+              Happy 19th birthday, Ishi! I'm really grateful that you're here. Not just as someone I love, but as someone who makes things feel
+              real and worth holding on to. I'bve seen how strong you are, even in ways you don't notice sometimes. <br><br/>
+              I hope this year gives you more peace, more clarity, and more moments where you feel genuinely happy. You deserve that.<br><br/>
+              I'm still here, choosing you, and I'm proud of the person you're becoming. <br><br/>
+              Enjoy your day, okay? I've got you.
+            </p>
+          </div>
+          <div class="letter-card" data-index="2">
+            <p class="letter-from">from: Mike</p>
+            <p class="letter-body">
+              Happy Birthday Ishi kahit di kita kilala
+            </p>
+          </div>
+        </div>
+
+        <div class="letter-nav">
+          <button class="letter-arrow" id="letterPrev" aria-label="Previous">‹</button>
+          <div class="letter-dots" id="letterDots"></div>
+          <button class="letter-arrow" id="letterNext" aria-label="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer (Confetti) -->
+    <footer id="footer">
+      <div class="footer-content">
+        <p class="footer-label">one last thing —</p>
+        <h2 class="footer-name">Happy 19th Birthday,<br/><em>Sheika Ishi.</em></h2>
+        <p class="footer-wish">May this year be as radiant as you are.</p>
+        <button class="confetti-btn" id="confettiBtn">
+          <span>celebrate!</span>
+        </button>
+        <p class="footer-sig">made with love · April 7, 2026</p>
+      </div>
+      <canvas id="confettiCanvas"></canvas>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
